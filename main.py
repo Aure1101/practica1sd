@@ -15,6 +15,7 @@ MONGO_URI = 'mongodb://localhost:27017'
 # Ejecutar el cliente de bases de datos
 client = motor_asyncio.AsyncIOMotorClient(MONGO_URI)
 db = client['sistemas_distribuidos']
+cat_collection = db['Categorias']
 users_collection = db['users']
 productos_collection = db['Productos']
 
@@ -43,25 +44,54 @@ class Clientes(BaseModel):
     apellido: str
     correo_electronico: str
 
-'''
-@app.get("/productos/")
-async def get_product(pro_id):
+@app.get('/categorias')
+async def get_categorias():
+    categorias = await categorias_collection.find().to_list(None)
+    for cat in categorias:
+        cat['_id'] = str(cat['_id'])
     
-    resultados = dict() # Tener todos los usuarios
-    # Obtener de manera asincrona todos los usuarios
-    productos = await productos_collection.find().to_list(None)
+    return categorias
 
-    # Iterar todos los elementos de la lista users
-    for i, producto in enumerate(productos):
-        # Diccionario por cada usuario
-        resultados[i] = dict()
-        resultados[i]["nombre"] = producto["nombre"]
-        resultados[i]["descripcion"] = producto["descripcion"]
-        resultados[i]["precio"] = producto["precio"]
-        resultados[i]["stock"] = producto["stock"]
+@app.get('/categorias/{cat_id}')
+async def get_categoria(cat_id):
+    categorias = await categorias_collection.find().to_list(None)
+    for cat in categorias:
+        if cat_id == str(cat['_id']):
+            cat['_id'] = str(cat['_id'])
+            return cat
+        
+    raise HTTPException(status_code=404, message=f'Categoria {cat_id} not found')
 
-    return resultados
-'''
+@app.post('/categorias')
+async def create_categoria(cat: Categorias):
+    await categorias_collection.insert_one(cat.dict())
+    return {
+        'message': 'Categoria added successfully'
+    }
+
+@app.put('/categorias/{cat_id}')
+async def update_categoria(cat_id, cat: Categorias):
+    categorias = await categorias_collection.find().to_list(None)
+    for _cat in categorias:
+        if str(_cat['_id']) == cat_id:
+            await categorias_collection.update_one(_cat, {'$set': cat.dict()})
+            return {
+                'message': f'Categoria {cat_id} updated Successfully'
+            }
+        
+    raise HTTPException(status_code=404, detail=f'Categoria {cat_id} not found')
+
+@app.delete('/categorias/{cat_id}')
+async def delete_categoria(cat_id, cat: Categorias):
+    categorias = await categorias_collection.find().to_list(None)
+    for _cat in categorias:
+        if str(_cat['_id']) == cat_id:
+            await categorias_collection.delete_one(_cat, {'$set': cat.dict()})
+            return {
+                'message': f'Categoria {cat_id} deleted Successfully'
+            }
+        
+    raise HTTPException(status_code=404, detail=f'Categoria {cat_id} not found')
 
 @app.get('/productos/')
 async def get_product_id():
