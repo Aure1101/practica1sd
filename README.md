@@ -46,3 +46,6 @@ Clientes
 - nombre (String): nombre del cliente
 - apellido (String): apellido del cliente
 - correo electr´onico (String): correo electr´onico del cliente
+
+  ![image](https://github.com/user-attachments/assets/5245ca15-ba54-4c9f-a3dd-ec8671d3d5f2)
+
