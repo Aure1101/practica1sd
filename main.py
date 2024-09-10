@@ -47,7 +47,7 @@ class Clientes(BaseModel):
 async def get_categorias():
     categorias = await categorias_collection.find().to_list(None)
     for cat in categorias:
-        cat['id'] = str(cat['id'])
+        cat['_id'] = str(cat['_id'])
     
     return categorias
 
@@ -55,7 +55,7 @@ async def get_categorias():
 async def get_categoria(cat_id):
     categorias = await categorias_collection.find().to_list(None)
     for cat in categorias:
-        if cat_id == str(cat['id']):
+        if cat_id == str(cat['_id']):
             cat['_id'] = str(cat['_id'])
             return cat
         
