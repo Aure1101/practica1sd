@@ -24,28 +24,29 @@ Las colecciones en nuestra base de datos incluyen:
 De manera mas descriptiva estas incluyen:
 
 Productos
-- id (ObjectId): identificador ´unico del producto
+- id (ObjectId): identificador unico del producto
 - nombre (String): nombre del producto
-- descripci´on (String): descripci´on del producto
+- descripcion (String): descripcion del producto
 - precio (Number): precio del producto
 - stock (Number): cantidad de unidades en stock
 
 Categorias
 - id (ObjectId): identificador unico de la categorıa
 - nombre (String): nombre de la categorıa
-- descripci´on (String): descripcion de la categorıa
+- descripcion (String): descripcion de la categorıa
 
 Pedidos
-- id (ObjectId): identificador ´unico del pedido
-- fecha (Date): fecha en que se realiz´o el pedido
+- id (ObjectId): identificador unico del pedido
+- fecha (Date): fecha en que se realizo el pedido
 - total (Number): total del pedido
 - productos (Array): arreglo de productos incluidos en el pedido
 
 Clientes
-- id (ObjectId): identificador ´unico del cliente
+- id (ObjectId): identificador unico del cliente
 - nombre (String): nombre del cliente
 - apellido (String): apellido del cliente
-- correo electr´onico (String): correo electr´onico del cliente
+- correo electronico (String): correo electronico del cliente
 
-  ![image](https://github.com/user-attachments/assets/5245ca15-ba54-4c9f-a3dd-ec8671d3d5f2)
+## Colecciones en MongoDB Compass
+![image](https://github.com/user-attachments/assets/5245ca15-ba54-4c9f-a3dd-ec8671d3d5f2)
 
