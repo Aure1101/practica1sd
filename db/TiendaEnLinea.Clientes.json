@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "66e064ae2d980b1daeced4a1"
+  },
+  "nombre": "Ana",
+  "apellido": "Perez",
+  "correo": "ana.perez@example.com"
+},
+{
+  "_id": {
+    "$oid": "66e064cd2d980b1daeced4a2"
+  },
+  "nombre": "Carlos",
+  "apellido": "Lopez",
+  "correo": "carlos.lopez@example.com"
+},
+{
+  "_id": {
+    "$oid": "66e064d52d980b1daeced4a3"
+  },
+  "nombre": "Maria",
+  "apellido": "Garcia",
+  "correo": "maria.garcia@example.com"
+},
+{
+  "_id": {
+    "$oid": "66e064e72d980b1daeced4a4"
+  },
+  "nombre": "Jorge",
+  "apellido": "Martinez",
+  "correo": "jorge.martinez@example.com"
+},
+{
+  "_id": {
+    "$oid": "66e064f62d980b1daeced4a5"
+  },
+  "nombre": "Lucia",
+  "apellido": "Hernandez",
+  "correo": "lucia.hernandez@example.com"
+},
+{
+  "_id": {
+    "$oid": "66e06624bd7d6b33d56085ce"
+  },
+  "nombre": "Raul",
+  "apellido": "Us",
+  "correo electrónico": "cardonastar@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "66e06657bd7d6b33d56085cf"
+  },
+  "nombre": "Valerio",
+  "apellido": "Smith",
+  "correo electrónico": "valerio@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "66e0665abd7d6b33d56085d0"
+  },
+  "nombre": "Diego",
+  "apellido": "Go",
+  "correo electrónico": "diego@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "66e0665cbd7d6b33d56085d1"
+  },
+  "nombre": "Clark",
+  "apellido": "Kent",
+  "correo electrónico": "super@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "66e0665fbd7d6b33d56085d2"
+  },
+  "nombre": "Bruce",
+  "apellido": "Wayne",
+  "correo electrónico": "wayne@gmail.com"
+}]
