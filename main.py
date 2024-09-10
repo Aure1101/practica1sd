@@ -43,6 +43,7 @@ class Clientes(BaseModel):
     apellido: str
     correo_electronico: str
 
+'''
 @app.get("/productos/")
 async def get_product(pro_id):
     
@@ -51,22 +52,35 @@ async def get_product(pro_id):
     productos = await productos_collection.find().to_list(None)
 
     # Iterar todos los elementos de la lista users
-    for i, productos in enumerate(productos):
+    for i, producto in enumerate(productos):
         # Diccionario por cada usuario
         resultados[i] = dict()
-        resultados[i]["nombre"] = productos["nombre"]
-        resultados[i]["descripcion"] = productos["descripcion"]
-        resultados[i]["precio"] = productos["precio"]
-        resultados[i]["stock"] = productos["stock"]
+        resultados[i]["nombre"] = producto["nombre"]
+        resultados[i]["descripcion"] = producto["descripcion"]
+        resultados[i]["precio"] = producto["precio"]
+        resultados[i]["stock"] = producto["stock"]
 
     return resultados
+'''
 
 @app.get('/productos/')
 async def get_product_id():
     productos = await productos_collection.find().tolist(None)
-    for productos in Productos:
-        productos=['_id']= str(productos['_id'])
+    for producto in productos:
+        producto['_id']= str(producto['_id'])
+
     return productos
+
+@app.get('/productos/{prod_id}')
+async def get_categoria(prod_id):
+    productos = await productos_collection.find().tolist(None)
+    for prod in productos:
+        if prod_id == str(prod['_id']):
+            prod['_id'] = str(prod['_id'])
+            return prod
+        
+    raise HTTPException(status_code=404, message=f'Producto {prod_id} not found')
+
 
 @app.post('/productos/')
 async def create_product(pro:Productos):
@@ -87,8 +101,8 @@ async def update_Producto(pro_id, pro: Productos):
         
 @app.delete('/productos/{pro_id}')
 async def delate_productos(pro_id, pro:Productos):
-    Productos= await productos_collection.find().to_list(None)
-    for  _pro in Productos:
+    productos= await productos_collection.find().to_list(None)
+    for  _pro in productos:
       if str(_pro['_id'])==pro_id:
        await productos_collection.delate_one(pro, {'$set': pro.dict()})
        return {
