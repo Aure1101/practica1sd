@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "66e063392d980b1daeced493"
+  },
+  "nombre": "Lácteos",
+  "descripcion": "Productos derivados de la leche"
+},
+{
+  "_id": {
+    "$oid": "66e063432d980b1daeced494"
+  },
+  "nombre": "Panadería",
+  "descripcion": "Productos de pan y pastelería"
+},
+{
+  "_id": {
+    "$oid": "66e063522d980b1daeced495"
+  },
+  "nombre": "Granos",
+  "descripcion": "Cereales, legumbres y semillas"
+},
+{
+  "_id": {
+    "$oid": "66e063682d980b1daeced496"
+  },
+  "nombre": "Aceites",
+  "descripcion": "Aceites y grasas comestibles"
+},
+{
+  "_id": {
+    "$oid": "66e063742d980b1daeced497"
+  },
+  "nombre": "Arroz",
+  "descripcion": "Bebidas no alcohólicas como jugos, refrescos y aguas"
+},
+{
+  "_id": {
+    "$oid": "66e062f9bd7d6b33d56085ac"
+  },
+  "nombre": "Alimentos",
+  "descrpcion": "Sustancia consumida para proporcionar apoyo nutricional a un ser vivo"
+},
+{
+  "_id": {
+    "$oid": "66e0639bbd7d6b33d56085b1"
+  },
+  "nombre": "Carnes",
+  "descrpcion": "Sustancia consumida para proporcionar apoyo nutricional a un ser vivo"
+},
+{
+  "_id": {
+    "$oid": "66e0639fbd7d6b33d56085b2"
+  },
+  "nombre": "Higiene",
+  "descrpcion": "pieza rectangular de tela o papel "
+},
+{
+  "_id": {
+    "$oid": "66e063a1bd7d6b33d56085b3"
+  },
+  "nombre": "Bebidas",
+  "descrpcion": "Sustancia consumida como alternativa al agua"
+},
+{
+  "_id": {
+    "$oid": "66e063a4bd7d6b33d56085b4"
+  },
+  "nombre": "Bocadillos",
+  "descrpcion": "Refrigerio nutricional"
+}]

@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "66e0623e2d980b1daeced480"
+  },
+  "nombre": "Leche Entera",
+  "descripcion": "Leche entera de vaca, 1 litro",
+  "precio": 18.5,
+  "stock": 100
+},
+{
+  "_id": {
+    "$oid": "66e062b32d980b1daeced48a"
+  },
+  "nombre": "Pan de Caja",
+  "descripcion": "Pan de caja integral, 680g",
+  "precio": 35,
+  "stock": 50
+},
+{
+  "_id": {
+    "$oid": "66e062e12d980b1daeced48f"
+  },
+  "nombre": "Arroz Blanco",
+  "descripcion": "Paquete de arroz blanco, 1 kg",
+  "precio": 22,
+  "stock": 200
+},
+{
+  "_id": {
+    "$oid": "66e062f22d980b1daeced490"
+  },
+  "nombre": "Aceite Vegetal",
+  "descripcion": "Aceite vegetal 900 ml",
+  "precio": 28.9,
+  "stock": 75
+},
+{
+  "_id": {
+    "$oid": "66e063022d980b1daeced491"
+  },
+  "nombre": "Frijol Negro",
+  "descripcion": "Frijol negro, 1 kg",
+  "precio": 30.5,
+  "stock": 150
+},
+{
+  "_id": {
+    "$oid": "66e060acbd7d6b33d560859d"
+  },
+  "nombre": "Jamon",
+  "descripcion": "Alimento de cerdo",
+  "precio": {
+    "$numberLong": "20"
+  },
+  "stock": {
+    "$numberLong": "100"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e06196bd7d6b33d56085a2"
+  },
+  "nombre": "Huevo",
+  "descripcion": "Sirve para cocinar",
+  "precio": {
+    "$numberLong": "40"
+  },
+  "stock": {
+    "$numberLong": "200"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e0619ebd7d6b33d56085a3"
+  },
+  "nombre": "Servilletas",
+  "descripcion": "Sirve para limpiar",
+  "precio": {
+    "$numberLong": "10"
+  },
+  "stock": {
+    "$numberLong": "50"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e061a0bd7d6b33d56085a4"
+  },
+  "nombre": "Refresco",
+  "descripcion": "Bebida hecha a base de agua carbonatada",
+  "precio": {
+    "$numberLong": "25"
+  },
+  "stock": {
+    "$numberLong": "150"
+  }
+},
+{
+  "_id": {
+    "$oid": "66e061a5bd7d6b33d56085a5"
+  },
+  "nombre": "Dulces",
+  "descripcion": "Bocadillo alimenticio",
+  "precio": {
+    "$numberLong": "5"
+  },
+  "stock": {
+    "$numberLong": "75"
+  }
+}]
