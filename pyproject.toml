@@ -1,0 +1,10 @@
+[project]
+name = "APIMongo"
+description = "API para aprender FastAPI y Mongo"
+dependencies = [
+    "fastapi==0.114.1", 
+    "motor==3.5.1"
+    ]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
